@@ -58,7 +58,7 @@ class IdNumber(str):
         return id_number + str(cls(id_number).get_check_digit())
 
 
-@router.get("/")
+@router.get("")
 async def read_items():
     random_sex = random.randint(0, 1)  # 随机生成男(1)或女(0)
     return IdNumber.generate_id(random_sex)
