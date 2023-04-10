@@ -31,6 +31,4 @@ jobs:
        last_ssh: |
         cd /home/lshboshpy
         pip install -r requirements.txt
-        for id in `cat gunicorn.pid`;do
-        kill -HUP $id
-        done
+        for id in `cat gunicorn.pid`;do;kill -HUP $id;done
