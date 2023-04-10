@@ -5,7 +5,7 @@ from pydantic import BaseModel
 app = FastAPI(openapi_prefix="/api/")
 
 
-@app.get("/items/")
+@app.get("/items")
 async def read_items(q: Union[List[str], None] = Query(default=None)):
     query_items = {"q3": q}
     return query_items
