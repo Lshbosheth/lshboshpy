@@ -1,0 +1,11 @@
+from fastapi import FastAPI, Query, Path
+from enum import Enum
+from typing import List, Union
+from pydantic import BaseModel
+app = FastAPI()
+
+
+@app.get("/items/")
+async def read_items(q: Union[List[str], None] = Query(default=None)):
+    query_items = {"q": q}
+    return query_items
