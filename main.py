@@ -2,7 +2,7 @@ from fastapi import FastAPI, Query, Path
 from enum import Enum
 from typing import List, Union
 from pydantic import BaseModel
-app = FastAPI()
+app = FastAPI(root_path="/api")
 
 
 @app.get("/items/")
