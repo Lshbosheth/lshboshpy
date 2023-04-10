@@ -26,8 +26,6 @@ jobs:
        user: ${{ secrets.SERVER_USER }}
        pass: ${{ secrets.SERVER_PASS }}
        connect_timeout: 10s
-       first_ssh: |
-        rm -rf /home/lshboshpy
        scp: |
             ./* => /home/lshboshpy
        last_ssh: |
