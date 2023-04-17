@@ -62,3 +62,9 @@ class IdNumber(str):
 async def read_items():
     random_sex = random.randint(0, 1)  # 随机生成男(1)或女(0)
     return IdNumber.generate_id(random_sex)
+
+
+@router.get("/{sex}")
+async def read_items(sex: int):
+    print(sex)
+    return IdNumber.generate_id(sex)
