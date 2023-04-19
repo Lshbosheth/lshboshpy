@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from routers import items, idCard, dbtest
+from routers import items, idCard, dbtest, qrCode
 import os
 
 mode = os.environ.get('mode')
@@ -11,3 +11,4 @@ else:
 app.include_router(items.router)
 app.include_router(idCard.router)
 app.include_router(dbtest.router)
+app.include_router(qrCode.router)
